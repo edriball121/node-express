@@ -11,7 +11,7 @@ const { logErrors, errorHandler, boomErrorHandler } = require('./middlewares/err
 //crear la app de express llamando al constructor
 const app = express();
 //configurar el puerto del servidor de express
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 //Agregar el middleware de express para manejo de jsons
 app.use(express.json());
@@ -20,7 +20,7 @@ app.use(express.json());
 const whiteList = ['http://localhost:8080', 'https://myapp.com', 'http://127.0.0.1:5500'];
 const options = {
   origin: (origin, callback) => {
-    if (whiteList.includes(origin)) {
+    if (whiteList.includes(origin) || !origin) {
       callback(null, true);
     } else {
       callback(new Error('no permitido'));
