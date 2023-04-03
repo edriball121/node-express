@@ -82,5 +82,14 @@
 1. instalar libreria --> npm i cors
 
 # Desplegar en heroku
-1. autenticar/registrar heroku: https://www.heroku.com/
-2. Instalar heroku cli
+* heroku ya no es gratis, otras alternativas
+https://railway.app/
+https://render.com/
+https://vercel.com/
+
+# Desplegar en vercel
+1. Crear cuenta
+2. Crear proyecto
+3. mover todo a una carpeta nueva llamada api
+
+

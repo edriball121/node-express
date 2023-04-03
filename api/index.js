@@ -41,7 +41,7 @@ app.listen(port, () => {
 
 //routes
 //req=request y res=response
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
   res.send('Mi primer servidor en express');
 });
 
